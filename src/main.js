@@ -1,5 +1,5 @@
 const SUPABASE_URL = 'https://jkpryieiyygvwoziajpg.supabase.co';
-const API_KEY = 'sb_publishable_YIfHphSz-CtHQ7s8uCkb_Q_L6qSPsE4';
+const API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImprcHJ5aWVpeXlndndvemlhanBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA0MDU2ODMsImV4cCI6MjA5NTk4MTY4M30.ln_Y0945HrtDRJAbBwCQG2GiznGyKGTaRFPc3eo6VK8';
 
 
 const articlesContainer = document.getElementById('articles-container');
