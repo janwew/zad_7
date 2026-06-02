@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Artykuły - Lab 6</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 p-8 font-sans">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6 text-center text-blue-900">Lista Artykułów</h1>
+
+        <div class="mb-6 flex justify-end">
+            <label for="sort-select" class="mr-3 font-semibold self-center">Sortuj:</label>
+            <select id="sort-select" class="p-2 border rounded-none shadow-sm bg-white border-gray-300">
+                <option value="created_at.asc">Po dacie rosnąco</option>
+                <option value="created_at.desc">Po dacie malejąco</option>
+                <option value="title.asc">Po nazwie alfabetycznie</option>
+            </select>
+        </div>
+
+        <div id="articles-container" class="space-y-6 mb-12">
+            <p class="text-center text-gray-500">Ładowanie artykułów...</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-none shadow-md border-t-4 border-blue-600">
+            <h2 class="text-2xl font-bold mb-4">Dodaj nowy artykuł</h2>
+            <form id="add-article-form" class="space-y-4">
+                <div>
+                    <label class="block font-semibold mb-1">Tytuł *</label>
+                    <input type="text" id="title" required class="w-full border border-gray-300 p-2 rounded-none focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">Podtytuł</label>
+                    <input type="text" id="subtitle" class="w-full border border-gray-300 p-2 rounded-none focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">Autor</label>
+                    <input type="text" id="author" class="w-full border border-gray-300 p-2 rounded-none focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">Treść</label>
+                    <textarea id="content" rows="4" class="w-full border border-gray-300 p-2 rounded-none focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+                <div>
+                    <label class="block font-semibold mb-1">Data utworzenia (opcjonalnie)</label>
+                    <input type="datetime-local" id="created_at" class="w-full border border-gray-300 p-2 rounded-none focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <button type="submit" class="bg-blue-600 text-white font-bold px-6 py-2 rounded-none hover:bg-blue-700 transition w-full sm:w-auto">
+                    Dodaj artykuł
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
