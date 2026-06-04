@@ -64,7 +64,7 @@ async function createNewArticle(event) {
     event.preventDefault(); 
 
     const newArticleData = {
-        title: document.getElementById('title').value, // <--- Tego brakuje u Ciebie!
+        title: document.getElementById('title').value, //
         subtitle: document.getElementById('subtitle').value,
         author: document.getElementById('author').value,
         content: document.getElementById('content').value
